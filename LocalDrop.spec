@@ -2,8 +2,8 @@
 
 
 a = Analysis(
-    ['app.py'],
-    pathex=[],
+    ['main.py'],
+    pathex=['.'],
     binaries=[],
     datas=[],
     hiddenimports=[],

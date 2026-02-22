@@ -2,10 +2,10 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 ; Non-commercial use only
 
-#define MyAppName "LocalDropV2"
-#define MyAppVersion "2.0"
+#define MyAppName "LocalDropV3"
+#define MyAppVersion "3.0"
 #define MyAppPublisher "Vedant Agarkar"
-#define MyAppExeName "LocalDropv2.exe"
+#define MyAppExeName "LocalDrop.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".myp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
@@ -13,7 +13,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{5C537F8E-7E89-40AE-B6DC-A0FE23446A74}
+AppId={{B3B16977-89DD-43F3-83DC-08CDA87D2C60}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}

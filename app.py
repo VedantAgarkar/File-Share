@@ -352,7 +352,7 @@ class DownloadHandler(http.server.BaseHTTPRequestHandler):
         <p style="color:#94a3b8;font-size:14px">Select file to upload</p>
         <button class="btn" onclick="selectFile()">&#128196; Send File</button>
         <button class="btn" onclick="selectFolder()">&#128193; Send Folder</button>
-        <input type="file" id="fileInput" style="display:none">
+        <input type="file" id="fileInput" multiple style="display:none">
         <input type="file" id="folderInput" webkitdirectory directory multiple style="display:none">
         <p id="fileName" style="color:#94a3b8;min-height:20px;margin:12px 0"></p>
         <button id="uploadBtn" class="upload-btn" onclick="uploadFiles()" style="display:none">Upload</button>
@@ -378,7 +378,7 @@ class DownloadHandler(http.server.BaseHTTPRequestHandler):
         }
         document.getElementById('fileInput').onchange=function(){
             selectedFiles=this.files;
-            document.getElementById('fileName').innerText=this.files[0]?.name||'';
+            document.getElementById('fileName').innerText=this.files.length > 1 ? this.files.length + ' files' : (this.files[0]?.name||'');
             document.getElementById('uploadBtn').style.display='block';
         };
         document.getElementById('folderInput').onchange=function(){
