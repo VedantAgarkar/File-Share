@@ -48,18 +48,9 @@ exec "${HERE}/usr/bin/LocalDrop" "$@"
 EOF
 chmod +x "$APPDIR/AppRun"
 
-# App icon generator if none exists
-python3 -c "
-from PIL import Image, ImageDraw
-img = Image.new('RGBA', (256, 256), color=(11, 15, 23, 255))
-d = ImageDraw.Draw(img)
-# Draw rounded blue circle / drop shape
-d.ellipse([(28, 28), (228, 228)], fill=(56, 189, 248, 255))
-d.polygon([(128, 48), (70, 160), (186, 160)], fill=(241, 245, 249, 255))
-d.rectangle([(110, 140), (146, 208)], fill=(241, 245, 249, 255))
-img.save('$APPDIR/localdrop.png')
-img.save('$APPDIR/usr/share/icons/hicolor/256x256/apps/localdrop.png')
-"
+# Copy App icon
+cp "$DIR/assets/icon.png" "$APPDIR/localdrop.png"
+cp "$DIR/assets/icon.png" "$APPDIR/usr/share/icons/hicolor/256x256/apps/localdrop.png"
 cp "$APPDIR/localdrop.png" "$APPDIR/.DirIcon"
 
 echo "--> AppDir assembled at $APPDIR"

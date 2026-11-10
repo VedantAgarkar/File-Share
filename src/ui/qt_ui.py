@@ -40,6 +40,11 @@ class LocalDropQtUI(QMainWindow):
         self.resize(520, 780)
         self.setMinimumSize(460, 680)
 
+        # Set Window Icon
+        icon_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "assets", "icon.png")
+        if os.path.exists(icon_path):
+            self.setWindowIcon(QIcon(icon_path))
+
         # Theme state
         self.is_dark_mode = True
 
