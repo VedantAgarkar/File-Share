@@ -1,12 +1,23 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-
 a = Analysis(
     ['main.py'],
     pathex=['.'],
     binaries=[],
     datas=[],
-    hiddenimports=[],
+    hiddenimports=[
+        'qrcode',
+        'PIL',
+        'PIL.Image',
+        'PyQt6',
+        'PyQt6.QtCore',
+        'PyQt6.QtGui',
+        'PyQt6.QtWidgets',
+        'zeroconf',
+        'ifaddr',
+        'cryptography',
+        'netifaces',
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

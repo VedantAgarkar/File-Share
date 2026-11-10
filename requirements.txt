@@ -1,2 +1,8 @@
-qrcode
-Pillow
+qrcode>=8.0
+pillow>=10.0
+netifaces>=0.11.0
+zeroconf>=0.140.0
+cryptography>=42.0.0
+PyQt6>=6.6.0
+pyinstaller>=6.0
+pytest>=8.0

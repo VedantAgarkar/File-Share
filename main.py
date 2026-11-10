@@ -1,11 +1,18 @@
 # main.py
-import tkinter as tk
-from src.ui.app_ui import LocalDropUI
+import sys
+from PyQt6.QtWidgets import QApplication
+from PyQt6.QtCore import Qt
+from src.ui.qt_ui import LocalDropQtUI
+from src.config import QSS_THEME
 
 def main():
-    root = tk.Tk()
-    app = LocalDropUI(root)
-    root.mainloop()
+    app = QApplication(sys.argv)
+    app.setStyle("Fusion")
+    app.setStyleSheet(QSS_THEME)
+
+    window = LocalDropQtUI()
+    window.show()
+    sys.exit(app.exec())
 
 if __name__ == "__main__":
     main()
